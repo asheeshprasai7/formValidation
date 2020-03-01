@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return validate()" id="container">
+        <h1 class="center">Student Registration</h1>
+        <div class="form-group">
+            <label for="name">FullName:</label>
+            <input type="text" name="name" id="fname" placeholder="FirstName" autocomplete="off">
+            <input type="text" name="name" id="mname" placeholder="MiddleName" autocomplete="off">
+            <input type="text" name="name" id="lname" placeholder="LastName" autocomplete="off">
+            <span id="fullName" class="text-danger"></span>
+        </div>
+
+
+        <!-- Can't left blank -->
+        <div class="form-group">
+            <label for="contact">Contact No: </label>
+            <input type="text" name="contact" id="contact" placeholder="Phone Number.." autocomplete="off"> 
+            <span id="cntc" class="text-danger"></span>
+            <!-- Must be 10 digits -->
+        </div>
+        
+        <div class="form-group">
+            <label for="course">Course/Program: </label>
+            <select name="course" id="course">
+                <option value=""selected="true" disabled="disabled">Course</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="Ph.D">Ph.D</option>
+            </select>
+            <span id="program" class="text-danger"></span>
+        </div>
+       
+        <div class="form-group">
+            <label for="year">Year: </label>
+            <select name="year" id="year">
+                <option selected="true" disabled="disabled">Year</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+        </div>
+        
+       <div class="form-group">
+        <label for="sem">Semester: </label>
+        <select name="sem" id="sem">
+            <option value=""selected="true" disabled="disabled">Semester</option>
+            <option value="">I</option>
+            <option value="">II</option>
+            <option value="">III</option>
+            <option value="">IV</option>
+            <option value="">V</option>
+            <option value="">VI</option>
+            <option value="">VII</option>
+            <option value="">VIII</option>
+        </select>
+       </div>
+
+       <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off">
+        <span id="mail" class="text-danger"></span>
+        <!-- !Email can't be empty -->
+       </div>
+        
+        <div class="form-group">
+            <label for="bdate">Birth Date:</label>
+            <input type="date" name="bdate" id="bdate">
+        </div>
+        
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea name="address" id="address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <div class="box">
+                <h4>Technical Skills</h4>
+                <label for="skills" class="mini-head">Language:</label>
+                <table>
+                  <input type="checkbox" name="ch1" id="ch1" >C
+                  <input type="checkbox" name="ch1" id="ch1">C++
+                  <input type="checkbox" name="ch1" id="ch1">Java
+                  <input type="checkbox" name="ch1" id="ch1">C#
+                  <input type="checkbox" name="ch1" id="ch1">Python
+                  <span id="drpdwn" class="text-danger"></span>
+      
+                  <label for="os" class="mini-head">Operating System</label> 
+                  <input type="checkbox" name="ch2" id="ch2">Windows
+                  <input type="checkbox" name="ch2" id="ch2">Linux
+                  <input type="checkbox" name="ch2" id="ch2">Mac
+                </table>
+                  
+      
+                  <input type="submit" value="SAVE" class="btn">
+                  <input type="reset" value="RESET" class="btn">
+              </div>
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
